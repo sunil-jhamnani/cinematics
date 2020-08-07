@@ -7,16 +7,13 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "release": "yarn run build && yarn run export && cd out/ && serve -l 80"
   },
   "dependencies": {
-    "@babel/plugin-proposal-decorators": "^7.3.0",
     "@zeit/next-sass": "^1.0.1",
-    "babel-loader": "^8.0.5",
     "bootstrap": "^4.3.1",
     "express": "^4.16.4",
-    "file-loader": "^3.0.1",
-    "image-webpack-loader": "^4.6.0",
     "isomorphic-unfetch": "^3.0.0",
     "js-cookie": "^2.2.0",
     "minimist": "^1.2.0",
@@ -32,11 +29,18 @@
     "react-redux": "^6.0.0",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "svg-sprite-loader": "^4.1.3",
-    "url-loader": "^1.1.2"
+    "serve": "^11.3.2"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "babel-loader": "^8.1.0",
+    "file-loader": "^6.0.0",
+    "image-webpack-loader": "^6.0.0",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "svg-sprite-loader": "^5.0.0",
+    "url-loader": "^4.1.0"
+  }
 }

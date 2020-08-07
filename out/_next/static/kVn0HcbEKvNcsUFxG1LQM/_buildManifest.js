@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST = {"/home":["static\u002Fcss\u002Fstyles.af8ac6a5.chunk.css","static\u002Fchunks\u002Fstyles.62f1489b03b1dfb11051.js"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()

@@ -35,20 +35,20 @@ module.exports = withSass({
             options: {
               mozjpeg: {
                 progressive: true,
-                quality: 65
+                quality: [0.65, 0.90]
               },
               optipng: {
                 enabled: false
               },
               pngquant: {
-                quality: '65-90',
+                quality: [0.65, 0.90],
                 speed: 4
               },
               gifsicle: {
                 interlaced: false
               },
               webp: {
-                quality: 75
+                quality: [0.75]
               }
             }
           }
