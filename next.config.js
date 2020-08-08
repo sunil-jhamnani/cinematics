@@ -1,5 +1,6 @@
 const withSass = require('@zeit/next-sass');
 const path = require('path');
+const env = process.env.NODE_ENV || 'development'
 module.exports = withSass({
   webpack: config => {
     config.module.rules.push(
@@ -62,5 +63,6 @@ module.exports = withSass({
       '/': { page: '/home' },
       '/home': { page: '/home' }
     }
-  }
+  },
+  assetPrefix: env === 'production' ? 'https://raw.githubusercontent.com/sunil-jhamnani/cinematics/master/docs' : '',
 });
