@@ -1,4 +1,5 @@
 const withSass = require('@zeit/next-sass');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const path = require('path');
 const env = process.env.NODE_ENV || 'development'
 module.exports = withSass({
@@ -64,5 +65,6 @@ module.exports = withSass({
       '/': { page: '/home' },
       '/home': { page: '/home' }
     }
-  }
+  },
+  assetPrefix: env === 'production' ? '/cinematics/' : '',
 });
