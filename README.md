@@ -1,1 +1,5 @@
-# Cinematics: A platform to know whats new with the cinema
+# Cinematics
+
+Demo application build with [Next.js](https://nextjs.org/)
+
+Used lazy loading concept.
