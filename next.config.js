@@ -3,6 +3,7 @@ const path = require('path');
 const env = process.env.NODE_ENV || 'development'
 module.exports = withSass({
   webpack: config => {
+    console.log(config)
     config.module.rules.push(
       {
         test: /\.js(?:|x)$/,
@@ -63,6 +64,5 @@ module.exports = withSass({
       '/': { page: '/home' },
       '/home': { page: '/home' }
     }
-  },
-  assetPrefix: env === 'production' ? 'https://raw.githubusercontent.com/sunil-jhamnani/cinematics/master/docs' : '',
+  }
 });
