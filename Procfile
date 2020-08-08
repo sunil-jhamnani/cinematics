@@ -1,1 +1,1 @@
-web: npm run release
+release: npm run release
