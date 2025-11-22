@@ -1,6 +1,5 @@
 import { Component } from 'react'
 import { connect } from 'react-redux';
-import '../styles/ListElement.scss'
 import {
   UpdateFilters as UpdateFiltersAction
 } from "../../../actions/movieDataActions";

@@ -1,9 +1,9 @@
+import React from 'react';
 import Link from 'next/link';
 import { connect } from 'react-redux';
-import '../styles/header.scss';
 import Router from 'next/router';
 import Dropdown from '../../dropdown/components/Dropdown';
-import logo from '../../../assets/images/icons/logo.png'
+// Using public asset path for logo (placed in public/icons)
 import {EVENT_GENRE} from '../../../_data';
 
 class Header extends React.Component {
@@ -17,10 +17,8 @@ class Header extends React.Component {
     return (
       <nav className="page-header navbar">
         <div className="page-header__logo-container col d-flex align-items-center">
-          <Link href="/home">
-            <a className="page-header__logo">
-              <img src={logo}></img>
-            </a>
+          <Link href="/home" className="page-header__logo">
+            <img src="/icons/logo.png" alt="Logo" />
           </Link>
           <Link href="#">
             <a href="" className="btn page-header__cta primary">COMMING SOON</a>

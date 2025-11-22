@@ -1,19 +1,13 @@
-import { lazyload } from 'react-lazyload';
+import React from 'react';
 import { connect } from 'react-redux';
-import '../styles/TrailerSection.scss';
 import { IMAGE_API_URL, MONTH_NAMES } from '../../../constants'
-import '../../../assets/images/icons/thumb.svg';
+// Icon assets served from public/icons; no direct import needed
 import PlayButton from './PlayButton';
 import { bindActionCreators } from "redux";
 import {
   ToggleVideoState as ToggleVideoStateAction
 } from "../../../actions/movieDataActions";
 
-@lazyload({
-  height: 200,
-  once: true,
-  offset: 10
-})
 class TrailerSection extends React.Component {
 
   handlePlay = () => {
@@ -33,14 +27,12 @@ class TrailerSection extends React.Component {
             <p>{MONTH_NAMES[releaseDate.getMonth()]}</p>
           </div>
           <div className="trailer-section__likes-votes">
-            {
-              movieInfo.wtsPerc && (<p className="trailer-section__likes">
-              <svg className="trailer-section__like-img">
-                <use xlinkHref="#thumb" />
-              </svg>
-              {`${movieInfo.wtsPerc}%`}
-            </p>)
-            }
+            {movieInfo.wtsPerc && (
+              <p className="trailer-section__likes">
+                <img className="trailer-section__like-img" src="/icons/thumb.svg" alt="Likes" />
+                {`${movieInfo.wtsPerc}%`}
+              </p>
+            )}
             <p className="trailer-section__votes">
               {`${movieInfo.csCount} vote(s)`}
             </p>

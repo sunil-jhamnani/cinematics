@@ -1,8 +1,7 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import '../styles/Dropdown.scss';
-import '../../../assets/images/icons/caret.svg';
+// Caret icon now served from public/icons
 import ListElement from "../../dropdown/components/ListElement";
 
 
@@ -71,9 +70,7 @@ class Dropdown extends Component {
         >
           <span className="dropdown__selections">{title}</span>
           <span className="dropdown__caret">
-            <svg className="dropdown__caret-img">
-              <use xlinkHref="#caret" />
-            </svg>
+            <img className="dropdown__caret-img" src="/icons/caret.svg" alt="Toggle" />
           </span>
         </div>
         { isOpen && (

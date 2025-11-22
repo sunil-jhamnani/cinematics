@@ -1,9 +1,9 @@
-import '../styles/VideoElement.scss';
 import { connect } from 'react-redux';
 import MovieTag from './MovieTag'
-import '../../../assets/images/icons/thumb.svg';
+import React from 'react';
+// Icons now referenced from /public/icons
 import {MONTH_NAMES} from "../../../constants";
-import '../../../assets/images/icons/calender.svg'
+// Calendar icon served from public/icons
 
 class VideoElement extends React.Component {
 
@@ -32,9 +32,7 @@ class VideoElement extends React.Component {
           }
           <div className="video-element__likes-votes d-flex align-items-center">
             <div className="">
-              <svg className="video-element__like-img">
-                <use xlinkHref="#thumb" />
-              </svg>
+              <img className="video-element__like-img" src="/icons/thumb.svg" alt="Likes" />
             </div>
             <div className="content">
               <p className="video-element__likes">{`${movieDetails.wtsPerc}%`}</p>
@@ -43,9 +41,7 @@ class VideoElement extends React.Component {
               </p>
             </div>
             <div className="video-element__calender-icon">
-              <svg className="video-element__like-img">
-                <use xlinkHref="#calender" />
-              </svg>
+              <img className="video-element__like-img" src="/icons/calender.svg" alt="Release date" />
             </div>
             <div className="content">
               <p className="video-element__release-month">{MONTH_NAMES[releaseDate.getMonth()]}</p>

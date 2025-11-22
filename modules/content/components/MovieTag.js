@@ -1,6 +1,5 @@
 import generateTagColor from '../../../utils/generateTagColor';
 
-import '../styles/MovieTag.scss';
 
 const MovieTag = ({ name }) => (
   <div

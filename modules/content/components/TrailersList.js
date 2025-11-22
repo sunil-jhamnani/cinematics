@@ -1,6 +1,6 @@
+import React from 'react';
 import TrailerSection from './TrailerSection';
 import { connect } from 'react-redux';
-import '../styles/TrailersList.scss';
 import { Fragment } from 'react';
 import VideoElement from './VideoElement'
 
