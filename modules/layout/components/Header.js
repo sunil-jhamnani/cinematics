@@ -20,11 +20,11 @@ class Header extends React.Component {
           <Link href="/home" className="page-header__logo">
             <img src="/icons/logo.png" alt="Logo" />
           </Link>
-          <Link href="#">
-            <a href="" className="btn page-header__cta primary">COMMING SOON</a>
+          <Link href="#" className="btn page-header__cta primary">
+            COMMING SOON
           </Link>
-          <Link href="#">
-            <a href="" className="btn btn-dark page-header__cta">NOW SHOWING</a>
+          <Link href="#" className="btn btn-dark page-header__cta">
+            NOW SHOWING
           </Link>
         </div>
         <div className="page-header__links col d-flex justify-content-end">
@@ -33,7 +33,7 @@ class Header extends React.Component {
         </div>
         {/*<NotificationContainer message={notification.message} type={notification.type}/>*/}
       </nav>
-    )
+    );
   }
 }
 
